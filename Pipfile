@@ -12,12 +12,7 @@ name = "downloadpytorch"
 torch = "*"
 torchvision = "*"
 torchaudio = "*"
-tensorflow = "1.15"
-tensorflow-gpu = "1.15"
-tensorboard = "1.15.0"
-tensorboardx = "*"
 matplotlib = "*"
-numpy = "*"
 
 [dev-packages]
 
