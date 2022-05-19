@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://download.pytorch.org/whl/cu113"
+verify_ssl = true
+name = "downloadpytorch"
+
+[packages]
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
+tensorflow = "1.15"
+tensorflow-gpu = "1.15"
+tensorboard = "1.15.0"
+tensorboardx = "*"
+matplotlib = "*"
+numpy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
