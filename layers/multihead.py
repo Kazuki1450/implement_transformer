@@ -13,9 +13,9 @@ class MultiHeadAttention(nn.Module):
         self.h = h
         self.d_k = d_model // h
         self.d_v = d_model // h
-        self.W_k = nn.parameter.Parameter(torch.tensor(h, d_model, self.d_k))
-        self.W_q = nn.parameter.Parameter(torch.tensor(h, d_model, self.d_k))
-        self.W_v = nn.parameter.Parameter(torch.tensor(h, d_model, self.d_v))
+        self.W_k = nn.parameter.Parameter(torch.Tensor(h, d_model, self.d_k))
+        self.W_q = nn.parameter.Parameter(torch.Tensor(h, d_model, self.d_k))
+        self.W_v = nn.parameter.Parameter(torch.Tensor(h, d_model, self.d_v))
         self.scaled_dot_prod = ScaledDotProductAttention(self.d_k)
         self.linear = nn.Linear(h * self.d_v, d_model)
 
