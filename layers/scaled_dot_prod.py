@@ -17,6 +17,7 @@ class ScaledDotProductAttention(nn.Module):
         mask: torch.Tensor[bool],
     ) -> torch.Tensor:
 
+        # q,k,v,は(batch, seq_len, num_unit)
         attention_weight: torch.Tensor = torch.matmul(
             q, torch.transpose(k, 1, 2)
         ) / np.sqrt(self.d_k)
