@@ -10,6 +10,6 @@ class FFN(nn.Module):
         self.linear2 = nn.Linear(d_ff, d_model)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        out = self.linear1(x)
+        out = F.relu(self.linear1(x))
         out = self.linear2(x)
         return out
